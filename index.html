@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Webpage</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+     <div class="container">
+
+        <h1>Welcome to my Holiday Food Page!</h1>
+        <h4>In this page we will look at classic holdiday time foods.</h4>
+    </div>
+
+
+
+<h1> Holiday Foods Around the World </h1>
+
+<p>Hover over the foods and click the button to make it snow!</p>
+
+<div id="hover-div">
+        <p>click here to see some recipies on how these are made!</p>
+         <a href="https://www.google.com"> Click here!</a>
+
+    </div>
+
+<div class="food-container">
+    <div class="food-card">
+   <img src="Images/gingerbread.JPG" alt="Gingerbread">
+        <h3>Gingerbread</h3>
+        <p>A classic winter treat filled with warm spices.</p>
+      
+    </div>
+
+    <div class="food-card">
+        <img src="Images/tamales.JPG" alt="Tamales">
+        <h3>Tamales</h3>
+        <p>Popular during holidays in many Latin cultures.</p>
+    </div>
+
+    <div class="food-card">
+        <img src="Images/panettone.JPG" alt="Panettone">
+        <h3>Panettone</h3>
+        <p>Italian sweet bread enjoyed at Christmas.</p>
+    </div>
+
+    <div class="food-card">
+        <img src="Images/latke.JPG" alt="Latkes">
+        <h3>Latkes</h3>
+        <p>Potato pancakes traditionally eaten during Hanukkah.</p>
+    </div>
+</div>
+
+<br>
+
+<button onclick="createSnow()">Make It Snow! </button>
+
+<script>
+function createSnow() {
+    for (let i = 0; i < 20; i++) {
+        const snowflake = document.createElement("div");
+        snowflake.className = "snowflake";
+        snowflake.innerHTML = "❄";
+        snowflake.style.left = Math.random() * window.innerWidth + "px";
+        snowflake.style.animationDuration = (Math.random() * 3 + 2) + "s";
+        document.body.appendChild(snowflake);
+    }
+}
+</script>
+
+</body>
+</html>
